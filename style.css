@@ -1,1 +1,77 @@
 /*------------Tady piš svoje stylování --------------*/
+
+
+
+main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: center;
+}
+
+.social-media {
+  display:flex;
+  flex-direction: row;
+  width: 40%;
+}
+
+.photos {
+  overflow:scroll;
+}
+
+.dashboard {
+  flex-wrap:wrap;
+}
+
+ @media only screen and (min-width: 576px) and (max-width: 991px) {
+   main {
+     flex-direction:column;
+   }
+   .social-media {
+     width: 30%;
+   }
+   .card--md {
+     width: 49%;
+   }
+  }
+
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    main {
+      flex-direction:row;
+    }
+    .social-media {
+      display: flex;
+      flex-direction: row;
+      width: 20%;
+    }
+    .dashboard {
+
+    }
+  }
+
+  @media only screen and (min-width: 1200px) {
+    main {
+      flex-direction:row;
+    }
+    .social-media {
+      width: 15%;
+    }
+  }
+
+.date__busy {
+  margin-top: 10%;
+}
+
+/* Událost v kalendáři
+Tečka, která nám značí událost v kalendáři není napozicovaná. Napozicuj ji tak, aby byla 10px od horního okraje a horizontálně přesně v půlce svého rodiče.
+
+Zalamování dashboardu
+Podívej se na obsah divu dashboard. Máme v něm upomínky, citát, fotky, hudbu, krokoměr a kalendář. Na různých šířkách se tento obsah různě přeskládá. Zařiď, aby layout dashboardu odpovídat výsledným obrázkům.
+
+Články */ */ */
+/* V poslední sekci naší stránky vidíme seznam zajímavých článků. Podívej se, jak rozložení kartiček vypadá na různých šířkách a nastyluj je podle zadání. Všimni si, že obrázek je vidět až od určité šířky.
+
+Bonus
+Zamysli se, jak bys stránku oživila. Co by se mohlo stát při kliknutí na jednotlivé elementy? Kde by se mohly brát data? Jak bysis stránku navrhla, pokud bys ji psala v reactu? */
+
+
