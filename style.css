@@ -1,7 +1,5 @@
 /*------------Tady piš svoje stylování --------------*/
 
-
-
 main {
   display: flex;
   flex-direction: column;
@@ -10,7 +8,7 @@ main {
 }
 
 .social-media {
-  display:flex;
+  display: flex;
   flex-direction: row;
   width: 40%;
 }
@@ -29,46 +27,75 @@ main {
   width: 100%;
 }
 
- @media only screen and (min-width: 576px) and (max-width: 991px) {
-   main {
-     flex-direction:column;
-   }
-   .social-media {
-     width: 30%;
-   }
-   .card--md, .card--sm {
-     width: 49%;
-   }
+.newsletter {
+  justify-content: space-between;
+}
+
+.newsletter__article img {
+  display: none;
+}
+
+img {
+  width: 100%;
+}
+
+@media only screen and (min-width: 576px) and (max-width: 991px) {
+  .social-media {
+    width: 30%;
   }
-
-  @media only screen and (min-width: 992px) and (max-width: 1199px) {
-    main {
-      flex-direction:column;
-    }
-    .social-media {
-      display: flex;
-      flex-direction: row;
-      width: 20%;
-    }
-
-    }
-
-
-  @media only screen and (min-width: 1200px) {
-    main {
-      flex-direction:column;
-    }
-    .social-media {
-      width: 15%;
-    }
-    .card--md, .card--wide {
-      flex-wrap: wrap;
-      width: 32%;
-    }
-    .card--wide {
-      order: -1;
-    }
+  .card--md,
+  .card--sm {
+    width: 49%;
   }
+  .newsletter__article img {
+    display: inline-block;
+  }
+  .newsletter__article {
+    display: flex;
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .social-media {
+    display: flex;
+    flex-direction: row;
+    width: 20%;
+  }
+  .card--md,
+  .card--sm {
+    width: 49%;
+  }
+  .newsletter__article {
+    width: 49%;
+    display: inline-block;
+    align-items: stretch;
+  }
+  .newsletter__article img {
+    display: inline-block;
+    align-self: stretch;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .social-media {
+    width: 15%;
+  }
+  .card--md,
+  .card--wide {
+    flex-wrap: wrap;
+    width: 32%;
+  }
+  .card--wide {
+    order: -1;
+  }
+  .newsletter__article {
+    width: 32%;
+    display: inline-block;
+  }
+  .newsletter__article img {
+    display: inline-block;
+  }
+}
 
 .date {
   position: relative;
@@ -79,16 +106,11 @@ main {
   position: absolute;
 }
 
-/* Událost v kalendáři
-Tečka, která nám značí událost v kalendáři není napozicovaná. Napozicuj ji tak, aby byla 10px od horního okraje a horizontálně přesně v půlce svého rodiče.
-
-Zalamování dashboardu
+/* Zalamování dashboardu
 Podívej se na obsah divu dashboard. Máme v něm upomínky, citát, fotky, hudbu, krokoměr a kalendář. Na různých šířkách se tento obsah různě přeskládá. Zařiď, aby layout dashboardu odpovídat výsledným obrázkům.
 
-Články */ */ */
+Články */
 /* V poslední sekci naší stránky vidíme seznam zajímavých článků. Podívej se, jak rozložení kartiček vypadá na různých šířkách a nastyluj je podle zadání. Všimni si, že obrázek je vidět až od určité šířky.
 
 Bonus
 Zamysli se, jak bys stránku oživila. Co by se mohlo stát při kliknutí na jednotlivé elementy? Kde by se mohly brát data? Jak bysis stránku navrhla, pokud bys ji psala v reactu? */
-
-
