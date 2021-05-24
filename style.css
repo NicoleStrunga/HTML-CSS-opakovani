@@ -16,11 +16,17 @@ main {
 }
 
 .photos {
-  overflow:scroll;
+  overflow-x: auto;
 }
 
 .dashboard {
-  flex-wrap:wrap;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card {
+  width: 100%;
 }
 
  @media only screen and (min-width: 576px) and (max-width: 991px) {
@@ -30,36 +36,47 @@ main {
    .social-media {
      width: 30%;
    }
-   .card--md {
+   .card--md, .card--sm {
      width: 49%;
    }
   }
 
   @media only screen and (min-width: 992px) and (max-width: 1199px) {
     main {
-      flex-direction:row;
+      flex-direction:column;
     }
     .social-media {
       display: flex;
       flex-direction: row;
       width: 20%;
     }
-    .dashboard {
 
     }
-  }
+
 
   @media only screen and (min-width: 1200px) {
     main {
-      flex-direction:row;
+      flex-direction:column;
     }
     .social-media {
       width: 15%;
     }
+    .card--md, .card--wide {
+      flex-wrap: wrap;
+      width: 32%;
+    }
+    .card--wide {
+      order: -1;
+    }
   }
 
+.date {
+  position: relative;
+}
+
 .date__busy {
-  margin-top: 10%;
+  top: 10px;
+  position: absolute;
 }
 
 /* Událost v kalendáři
